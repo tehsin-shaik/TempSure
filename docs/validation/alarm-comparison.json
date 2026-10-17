@@ -1,0 +1,2953 @@
+{
+  "generated": "2026-10-17T19:56:02.661Z",
+  "node": "v24.19.0",
+  "runsPerScenario": 1000,
+  "limitsC": [
+    2,
+    8
+  ],
+  "sigmasC": [
+    0,
+    0.1,
+    0.25,
+    0.5
+  ],
+  "methods": {
+    "limit": "Limit alarm: first reading outside 2–8 °C",
+    "confirmed": "TempSure quarantine: 2 consecutive readings outside 2–8 °C",
+    "guard": "Guard-band pre-alarm: reading ≥ 7.5 °C or ≤ 2.5 °C",
+    "pqs": "WHO PQS E006 fridge-logger alarms: ≥ 8 °C for 10 h or ≤ −0.5 °C for 60 min",
+    "trend": "TempSure early warning: 6-reading slope > 0.06 °C/min, crossing ≤ 20 min"
+  },
+  "parity": {
+    "trips": 4000,
+    "trendWarningMismatches": 0,
+    "quarantineMismatches": 0
+  },
+  "comparison": {
+    "0": {
+      "limit": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 58.33
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "confirmed": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 100,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 100,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 100,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "guard": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 2,
+            "p5": 3,
+            "median": 4,
+            "p95": 4,
+            "max": 5
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 1,
+            "p5": 2,
+            "median": 2,
+            "p95": 3,
+            "max": 3
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 2,
+            "p5": 2,
+            "median": 3,
+            "p95": 4,
+            "max": 5
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 1,
+            "p5": 2,
+            "median": 3,
+            "p95": 4,
+            "max": 5
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "pqs": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "trend": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 13,
+            "p5": 13,
+            "median": 14,
+            "p95": 15,
+            "max": 15
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 7,
+            "p5": 7,
+            "median": 8,
+            "p95": 9,
+            "max": 10
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 13,
+            "p5": 14,
+            "median": 15,
+            "p95": 16,
+            "max": 17
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 7,
+            "p5": 7,
+            "median": 14,
+            "p95": 16,
+            "max": 17
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      }
+    },
+    "0.1": {
+      "limit": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 75.71,
+          "pctAlarmAfterStart": 23.21,
+          "pctMissed": 1.07,
+          "leadMin": {
+            "n": 212,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 2,
+            "max": 2
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 58.75
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 84.2,
+          "pctAlarmAfterStart": 15.8,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 842,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 80.1,
+          "pctAlarmAfterStart": 19.9,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 801,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 81.36,
+          "leadMin": {
+            "n": 1855,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "confirmed": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 17.86,
+          "pctAlarmAfterStart": 58.57,
+          "pctMissed": 23.57,
+          "leadMin": {
+            "n": 50,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 12.92
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 14.6,
+          "pctAlarmAfterStart": 85.4,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 146,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 19.8,
+          "pctAlarmAfterStart": 80.2,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 198,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 17.28,
+          "leadMin": {
+            "n": 394,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "guard": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 2,
+            "p5": 3,
+            "median": 4,
+            "p95": 5,
+            "max": 6
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 1,
+            "p5": 1,
+            "median": 2,
+            "p95": 3,
+            "max": 4
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 1,
+            "p5": 2,
+            "median": 3,
+            "p95": 5,
+            "max": 6
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 1,
+            "p5": 2,
+            "median": 3,
+            "p95": 4,
+            "max": 6
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "pqs": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "trend": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 9.4
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 12,
+            "p5": 13,
+            "median": 14,
+            "p95": 23,
+            "max": 24
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 6,
+            "p5": 7,
+            "median": 8,
+            "p95": 39,
+            "max": 41
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 12,
+            "p5": 13,
+            "median": 15,
+            "p95": 46,
+            "max": 49
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 6,
+            "p5": 7,
+            "median": 14,
+            "p95": 39,
+            "max": 49
+          },
+          "pctFalseAlarmNormalTrips": 9.4
+        }
+      }
+    },
+    "0.25": {
+      "limit": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 81.79,
+          "pctAlarmAfterStart": 14.64,
+          "pctMissed": 3.57,
+          "leadMin": {
+            "n": 229,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 3,
+            "max": 7
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 75.69
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 76.5,
+          "pctAlarmAfterStart": 23.5,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 765,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 2,
+            "max": 4
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 81.2,
+          "pctAlarmAfterStart": 18.8,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 812,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 3,
+            "max": 6
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 79.21,
+          "leadMin": {
+            "n": 1806,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 3,
+            "max": 7
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "confirmed": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 29.64,
+          "pctAlarmAfterStart": 30.71,
+          "pctMissed": 39.64,
+          "leadMin": {
+            "n": 83,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 2,
+            "max": 4
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 22.5
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 23.6,
+          "pctAlarmAfterStart": 76.4,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 236,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 28.4,
+          "pctAlarmAfterStart": 71.6,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 284,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 3
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 26.45,
+          "leadMin": {
+            "n": 603,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 1,
+            "max": 4
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "guard": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 1,
+            "p5": 2,
+            "median": 4,
+            "p95": 7,
+            "max": 8
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 0,
+            "p5": 1,
+            "median": 2,
+            "p95": 4,
+            "max": 6
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 1,
+            "p5": 2,
+            "median": 4,
+            "p95": 6,
+            "max": 9
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 0,
+            "p5": 1,
+            "median": 3,
+            "p95": 6,
+            "max": 9
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "pqs": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "trend": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 98.7
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 12,
+            "p5": 13,
+            "median": 23,
+            "p95": 24,
+            "max": 24
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 6,
+            "p5": 8,
+            "median": 38,
+            "p95": 40,
+            "max": 41
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 12,
+            "p5": 16,
+            "median": 45,
+            "p95": 48,
+            "max": 49
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 6,
+            "p5": 13,
+            "median": 38,
+            "p95": 47,
+            "max": 49
+          },
+          "pctFalseAlarmNormalTrips": 98.7
+        }
+      }
+    },
+    "0.5": {
+      "limit": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 91.79,
+          "pctAlarmAfterStart": 7.86,
+          "pctMissed": 0.36,
+          "leadMin": {
+            "n": 257,
+            "min": 0,
+            "p5": 0,
+            "median": 3,
+            "p95": 6,
+            "max": 9
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 91.11
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 86.3,
+          "pctAlarmAfterStart": 13.7,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 863,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 4,
+            "max": 7
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 88.6,
+          "pctAlarmAfterStart": 11.4,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 886,
+            "min": 0,
+            "p5": 0,
+            "median": 2,
+            "p95": 6,
+            "max": 9
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 87.98,
+          "leadMin": {
+            "n": 2006,
+            "min": 0,
+            "p5": 0,
+            "median": 2,
+            "p95": 5,
+            "max": 9
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "confirmed": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 37.14,
+          "pctAlarmAfterStart": 28.93,
+          "pctMissed": 33.93,
+          "leadMin": {
+            "n": 104,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 4,
+            "max": 5
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 41.94
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 29.6,
+          "pctAlarmAfterStart": 70.4,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 296,
+            "min": 0,
+            "p5": 0,
+            "median": 0,
+            "p95": 2,
+            "max": 4
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 35,
+          "pctAlarmAfterStart": 65,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 350,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 3,
+            "max": 6
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 32.89,
+          "leadMin": {
+            "n": 750,
+            "min": 0,
+            "p5": 0,
+            "median": 1,
+            "p95": 3,
+            "max": 6
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "guard": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0.1
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 0,
+            "p5": 2,
+            "median": 6,
+            "p95": 9,
+            "max": 12
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 99.86
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 99.8,
+          "pctAlarmAfterStart": 0.2,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 998,
+            "min": 0,
+            "p5": 1,
+            "median": 3,
+            "p95": 6,
+            "max": 9
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 0,
+            "p5": 2,
+            "median": 5,
+            "p95": 9,
+            "max": 27
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 99.91,
+          "leadMin": {
+            "n": 2278,
+            "min": 0,
+            "p5": 1,
+            "median": 4,
+            "p95": 8,
+            "max": 27
+          },
+          "pctFalseAlarmNormalTrips": 0.1
+        }
+      },
+      "pqs": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 0
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 0,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 100,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 0,
+          "leadMin": {
+            "n": 0
+          },
+          "pctFalseAlarmNormalTrips": 0
+        }
+      },
+      "trend": {
+        "normal": {
+          "trips": 1000,
+          "excursions": 0,
+          "pctAlarmByExcursionStart": null,
+          "pctAlarmAfterStart": null,
+          "pctMissed": null,
+          "leadMin": {
+            "n": 0
+          },
+          "tripsWithoutExcursion": 1000,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "near": {
+          "trips": 1000,
+          "excursions": 280,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 280,
+            "min": 12,
+            "p5": 17,
+            "median": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "tripsWithoutExcursion": 720,
+          "pctAlarmWithoutExcursion": 100
+        },
+        "breach": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 18,
+            "p5": 33,
+            "median": 40,
+            "p95": 41,
+            "max": 42
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "freeze": {
+          "trips": 1000,
+          "excursions": 1000,
+          "pctAlarmByExcursionStart": 100,
+          "pctAlarmAfterStart": 0,
+          "pctMissed": 0,
+          "leadMin": {
+            "n": 1000,
+            "min": 27,
+            "p5": 40,
+            "median": 46,
+            "p95": 48,
+            "max": 49
+          },
+          "tripsWithoutExcursion": 0,
+          "pctAlarmWithoutExcursion": null
+        },
+        "all": {
+          "excursions": 2280,
+          "pctAlarmByExcursionStart": 100,
+          "leadMin": {
+            "n": 2280,
+            "min": 12,
+            "p5": 23,
+            "median": 40,
+            "p95": 48,
+            "max": 49
+          },
+          "pctFalseAlarmNormalTrips": 100
+        }
+      }
+    }
+  },
+  "sweeps": {
+    "trend": [
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 4,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 98.03,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 93.16,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 10,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 81.93,
+        "medianLeadMin": 5,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 7,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 15,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 28.99,
+        "medianLeadMin": 5,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 58.75
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 17,
+        "pctFalseAlarmNormalTrips": 72.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 17,
+        "pctFalseAlarmNormalTrips": 72.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 17,
+        "pctFalseAlarmNormalTrips": 72.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 17,
+        "pctFalseAlarmNormalTrips": 72.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 17,
+        "pctFalseAlarmNormalTrips": 72.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 42.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 4,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 99.91,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 3.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 4.2,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 98.9,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 0.8,
+        "pctAlarmNearMissInRange": 97.92
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 13,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 3.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 10,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 87.11,
+        "medianLeadMin": 5,
+        "pctFalseAlarmNormalTrips": 0.8,
+        "pctAlarmNearMissInRange": 89.72
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 5.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 99.87,
+        "medianLeadMin": 7,
+        "pctFalseAlarmNormalTrips": 3.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 15,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 35.48,
+        "medianLeadMin": 4,
+        "pctFalseAlarmNormalTrips": 0.8,
+        "pctAlarmNearMissInRange": 45.97
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 39,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 4,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 36,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 34,
+        "pctFalseAlarmNormalTrips": 88.6,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 99.96,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 41.9,
+        "pctAlarmNearMissInRange": 99.86
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 29,
+        "pctFalseAlarmNormalTrips": 59.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 29,
+        "pctFalseAlarmNormalTrips": 59.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 29,
+        "pctFalseAlarmNormalTrips": 59.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 29,
+        "pctFalseAlarmNormalTrips": 59.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 28,
+        "pctFalseAlarmNormalTrips": 59.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 48.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 10,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 95.61,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 29.2,
+        "pctAlarmNearMissInRange": 93.61
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 24,
+        "pctFalseAlarmNormalTrips": 55.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 24,
+        "pctFalseAlarmNormalTrips": 55.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 24,
+        "pctFalseAlarmNormalTrips": 55.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 24,
+        "pctFalseAlarmNormalTrips": 55.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 99.96,
+        "medianLeadMin": 24,
+        "pctFalseAlarmNormalTrips": 55.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 98.77,
+        "medianLeadMin": 22,
+        "pctFalseAlarmNormalTrips": 48.7,
+        "pctAlarmNearMissInRange": 99.86
+      },
+      {
+        "sigma": 0.25,
+        "window": 15,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 61.54,
+        "medianLeadMin": 23,
+        "pctFalseAlarmNormalTrips": 29.2,
+        "pctAlarmNearMissInRange": 63.75
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 4,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.9,
+        "pctAlarmNearMissInRange": 99.86
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 99.5,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 92.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 10,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 98.68,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 76.4,
+        "pctAlarmNearMissInRange": 98.61
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.03,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 94.2,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.04,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 94.2,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 94,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.08,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 93.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.1,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 99.69,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 92.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.15,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 98.25,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 85.9,
+        "pctAlarmNearMissInRange": 98.89
+      },
+      {
+        "sigma": 0.5,
+        "window": 15,
+        "slopeC_per_min": 0.2,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 86.14,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 75.5,
+        "pctAlarmNearMissInRange": 87.92
+      }
+    ],
+    "trendHorizon": [
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 6,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 10,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 30,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 15,
+        "pctFalseAlarmNormalTrips": 6.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 45,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 30,
+        "pctFalseAlarmNormalTrips": 80.5,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 6,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 10,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 14,
+        "pctFalseAlarmNormalTrips": 9.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 30,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 27,
+        "pctFalseAlarmNormalTrips": 72.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 45,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 99.8,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 5,
+        "pctAlarmByExcursionStart": 99.91,
+        "medianLeadMin": 6,
+        "pctFalseAlarmNormalTrips": 0.5,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 10,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 12,
+        "pctFalseAlarmNormalTrips": 20.4,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 38,
+        "pctFalseAlarmNormalTrips": 98.7,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 30,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 45,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 5,
+        "pctAlarmByExcursionStart": 99.69,
+        "medianLeadMin": 10,
+        "pctFalseAlarmNormalTrips": 43,
+        "pctAlarmNearMissInRange": 99.72
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 10,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 39,
+        "pctFalseAlarmNormalTrips": 99.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 20,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 30,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "window": 6,
+        "slopeC_per_min": 0.06,
+        "horizonMin": 45,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 40,
+        "pctFalseAlarmNormalTrips": 100,
+        "pctAlarmNearMissInRange": 100
+      }
+    ],
+    "guard": [
+      {
+        "sigma": 0,
+        "bandC": 0.25,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 1,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 99.31
+      },
+      {
+        "sigma": 0,
+        "bandC": 0.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 3,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "bandC": 1,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 6,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0,
+        "bandC": 1.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 8,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "bandC": 0.25,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 1,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 98.75
+      },
+      {
+        "sigma": 0.1,
+        "bandC": 0.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 3,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "bandC": 1,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 5,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.1,
+        "bandC": 1.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 8,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "bandC": 0.25,
+        "pctAlarmByExcursionStart": 99.04,
+        "medianLeadMin": 2,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 98.47
+      },
+      {
+        "sigma": 0.25,
+        "bandC": 0.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 3,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "bandC": 1,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 6,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.25,
+        "bandC": 1.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 8,
+        "pctFalseAlarmNormalTrips": 0.3,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "bandC": 0.25,
+        "pctAlarmByExcursionStart": 97.98,
+        "medianLeadMin": 3,
+        "pctFalseAlarmNormalTrips": 0,
+        "pctAlarmNearMissInRange": 98.89
+      },
+      {
+        "sigma": 0.5,
+        "bandC": 0.5,
+        "pctAlarmByExcursionStart": 99.91,
+        "medianLeadMin": 4,
+        "pctFalseAlarmNormalTrips": 0.1,
+        "pctAlarmNearMissInRange": 99.86
+      },
+      {
+        "sigma": 0.5,
+        "bandC": 1,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 7,
+        "pctFalseAlarmNormalTrips": 3.5,
+        "pctAlarmNearMissInRange": 100
+      },
+      {
+        "sigma": 0.5,
+        "bandC": 1.5,
+        "pctAlarmByExcursionStart": 100,
+        "medianLeadMin": 11,
+        "pctFalseAlarmNormalTrips": 54.7,
+        "pctAlarmNearMissInRange": 100
+      }
+    ]
+  }
+}

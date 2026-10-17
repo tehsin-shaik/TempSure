@@ -178,6 +178,12 @@ What this means for TempSure:
   ±0.06 °C (SD ≈ 0.035 °C), about ten times smaller. Validation shows the predictive warning
   gives false alerts on most steady trips once noise reaches SD 0.25 °C. Real logger noise
   must be characterised before the 0.06 °C/min slope threshold can be trusted.
+- **Comparison with simpler alarms (synthetic).** On the demo's feed the trend warning gives
+  a median 14 min notice, against 3 min for a guard band 0.5 °C inside the limits and 0 for
+  a plain limit alarm. At 0.25 °C added noise, a 1 °C guard band or a 5-minute prediction
+  horizon both give about 6 min notice with ≤ 0.5% false alarms, while the default setting
+  false-alarms on 98.7% of normal trips
+  ([VALIDATION §8](../VALIDATION.md#8-comparison-with-conventional-alarms-and-threshold-sweep)).
 
 ### 3.3 Transport
 

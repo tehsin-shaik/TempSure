@@ -5,7 +5,8 @@
 | Check | Command | Covers |
 |---|---|---|
 | Logic validation | `node tools/validate.mjs` | SHA-256, MKT, trend slope, 4 scenarios × 1000 seeded runs, rule sensitivity, tamper tests, QR fit and round-trip. See [VALIDATION.md](VALIDATION.md) |
-| Syntax | `node --check app.js story.js sim3d.js` | Parse errors in the shipped scripts |
+| Alarm comparison | `node tools/compare-alarms.mjs` | Trend warning vs limit, guard-band, quarantine and WHO PQS alarms, plus setting sweeps. Asserts parity with `app.js`. See [VALIDATION.md §8](VALIDATION.md#8-comparison-with-conventional-alarms-and-threshold-sweep) |
+| Syntax | `node --check app.js story.js sim3d.js tools/*.mjs` | Parse errors in the shipped scripts |
 
 The harness runs the shipped `app.js` itself, not a copy, so changes to the rules show up in
 the results straight away. Running `tools/validate.mjs` exits with code 1 if any asserted
