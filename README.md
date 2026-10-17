@@ -59,8 +59,22 @@ Vercel or Netlify work too: import the repo with no build command and `.` as the
 
 ## What's real and what's simulated
 
-- **Simulated:** the sensor feed only. Temperatures come from a physical heat-transfer model for each scenario.
+- **Simulated:** the sensor feed only. Temperatures come from a scripted first-order response curve for each scenario (see [docs/MODEL.md](docs/MODEL.md)).
 - **Working as built:** prediction, excursion detection, quarantine, MKT, evidence report, decision workflow, hash-chained audit log and QR passport.
+
+## Research and validation
+
+The background research, model and test results behind the demo, with every claim labelled VERIFIED, APPROX or UNVERIFIED:
+
+| Document | What's in it |
+|---|---|
+| [Research notes](docs/research/research-notes.md) | Cold-chain science, product labels, USP/WHO/GDP rules, data integrity, UAE regulation, existing products |
+| [Claims audit](docs/research/claims-audit.md) | Every README and UI claim checked against sources and test results |
+| [Model](docs/MODEL.md) | Every parameter and rule in `app.js`, with its source or marked [assumed] |
+| [Validation](docs/VALIDATION.md) | SHA-256, MKT, 4 scenarios × 1000 seeded runs, noise sensitivity, tamper and QR tests |
+| [Architecture](docs/ARCHITECTURE.md) · [QA](docs/QA.md) · [References](docs/REFERENCES.md) | Code layout and production path, checks, sources |
+
+Reproduce the validation with `node tools/validate.mjs` (Node 18+, no install). All results come from simulated or synthetic data, not real loggers.
 
 ## Tech
 
