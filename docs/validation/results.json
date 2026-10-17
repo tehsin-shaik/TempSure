@@ -1,0 +1,612 @@
+{
+  "generated": "2026-10-17T17:56:02.534Z",
+  "node": "v24.19.0",
+  "runsPerScenario": 1000,
+  "checks": [
+    {
+      "group": "sha256",
+      "name": "FIPS 180-4 vector \"\" (len 0)",
+      "pass": true
+    },
+    {
+      "group": "sha256",
+      "name": "FIPS 180-4 vector \"abc\" (len 3)",
+      "pass": true
+    },
+    {
+      "group": "sha256",
+      "name": "FIPS 180-4 vector \"abcdbcdecdef…\" (len 56)",
+      "pass": true
+    },
+    {
+      "group": "sha256",
+      "name": "2000 random UTF-8 strings (0–299 chars, incl. Arabic, CJK, emoji) match node:crypto",
+      "pass": true,
+      "detail": "0 mismatches"
+    },
+    {
+      "group": "sha256",
+      "name": "100 000-byte input matches node:crypto",
+      "pass": true
+    },
+    {
+      "group": "mkt",
+      "name": "empty readings return null",
+      "pass": true
+    },
+    {
+      "group": "mkt",
+      "name": "constant 5 °C returns 5 °C",
+      "pass": true
+    },
+    {
+      "group": "mkt",
+      "name": "matches USP <1079.2> formula (ΔH 83.144 kJ/mol, R 8.3144 J/mol·K) on 1000 random series",
+      "pass": true,
+      "detail": "max |Δ| = 5.68e-14 °C"
+    },
+    {
+      "group": "mkt",
+      "name": "MKT ≥ arithmetic mean on every random series (Jensen; expected for Arrhenius weighting)",
+      "pass": true
+    },
+    {
+      "group": "trend",
+      "name": "least-squares slope exact on a 0.25 °C/min line",
+      "pass": true
+    },
+    {
+      "group": "trend",
+      "name": "fewer than 3 points gives slope 0",
+      "pass": true
+    },
+    {
+      "group": "harness",
+      "name": "harness runner reproduces app runToEnd() trace exactly",
+      "pass": true
+    },
+    {
+      "group": "scenario",
+      "name": "normal: no warning and no quarantine in any run",
+      "pass": true,
+      "detail": "0% warned, 0% quarantined"
+    },
+    {
+      "group": "scenario",
+      "name": "near-miss: warned, scripted response, never quarantined",
+      "pass": true,
+      "detail": "100% warned, 0% quarantined"
+    },
+    {
+      "group": "scenario",
+      "name": "near-miss without response (counterfactual): share of warnings that would have become excursions",
+      "pass": null,
+      "detail": "28% quarantined; peak median 8.06 °C; lead median 14 min"
+    },
+    {
+      "group": "scenario",
+      "name": "breach: always quarantined, warning precedes excursion",
+      "pass": true,
+      "detail": "lead 7–10 min"
+    },
+    {
+      "group": "scenario",
+      "name": "freeze: always quarantined and freeze flag raised",
+      "pass": true,
+      "detail": "low median -1.38 °C"
+    },
+    {
+      "group": "scenario",
+      "name": "hash chain verifies on every simulated run",
+      "pass": true
+    },
+    {
+      "group": "rules",
+      "name": "a 2-minute 8.3 °C blip triggers quarantine (stricter than USP <659> CCT 8–15 °C ≤24 h allowance; by design a hold, not a verdict)",
+      "pass": true,
+      "detail": {
+        "trace": "5 °C, 2 min at 8.2–8.3 °C, back to 6 °C",
+        "quarantined": true,
+        "minutesOut": 2,
+        "peak": 8.3
+      }
+    },
+    {
+      "group": "rules",
+      "name": "freeze flag fires at ≤0 °C on freeze-sensitive stock",
+      "pass": true
+    },
+    {
+      "group": "rules",
+      "name": "freeze flag does not fire for stock marked not freeze-sensitive (still quarantined below 2 °C)",
+      "pass": true
+    },
+    {
+      "group": "audit",
+      "name": "all seeded shipments verify",
+      "pass": true,
+      "detail": "4 shipments"
+    },
+    {
+      "group": "audit",
+      "name": "editing an event text is detected at that event",
+      "pass": true,
+      "detail": {
+        "ok": false,
+        "at": 6
+      }
+    },
+    {
+      "group": "audit",
+      "name": "editing an event minute is detected",
+      "pass": true
+    },
+    {
+      "group": "audit",
+      "name": "reordering events is detected",
+      "pass": true
+    },
+    {
+      "group": "audit",
+      "name": "known integrity gaps documented (expected to be non-empty for this demo design)",
+      "pass": true,
+      "detail": "6 gaps"
+    },
+    {
+      "group": "qr",
+      "name": "snapshot round-trips through base64url",
+      "pass": true
+    },
+    {
+      "group": "qr",
+      "name": "every seeded passport fits a QR code (ECC level L, version ≤ 40)",
+      "pass": true,
+      "detail": "TS-0138: 586 chars → v16; TS-0137: 986 chars → v22; TS-0136: 1165 chars → v24; TS-0135: 1190 chars → v25"
+    },
+    {
+      "group": "qr",
+      "name": "QR payload is unsigned (forged status decodes) — documented limitation",
+      "pass": true
+    }
+  ],
+  "mktExamples": {
+    "23 h at 5 °C + 1 h at 15 °C (hourly)": {
+      "mean": 5.42,
+      "mkt": 5.76
+    },
+    "22 h at 5 °C + 2 h at 25 °C (hourly)": {
+      "mean": 6.67,
+      "mkt": 9.83
+    }
+  },
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "respond": true,
+      "runs": 1000,
+      "pctQuarantined": 0,
+      "pctWarned": 0,
+      "pctCorrected": 0,
+      "pctFreezeFlag": 0,
+      "pctChainOk": 100,
+      "firstAlertMin": {
+        "n": 0
+      },
+      "firstOutOfRangeMin": {
+        "n": 0
+      },
+      "excursionConfirmedMin": {
+        "n": 0
+      },
+      "warningLeadMin": {
+        "n": 0
+      },
+      "peakC": {
+        "n": 1000,
+        "min": 5.43,
+        "p5": 5.52,
+        "median": 5.62,
+        "p95": 5.71,
+        "max": 5.8
+      },
+      "lowC": {
+        "n": 1000,
+        "min": 4.78,
+        "p5": 4.82,
+        "median": 4.89,
+        "p95": 4.95,
+        "max": 5.01
+      },
+      "minutesOut": {
+        "n": 1000,
+        "min": 0,
+        "p5": 0,
+        "median": 0,
+        "p95": 0,
+        "max": 0
+      },
+      "mktC": {
+        "n": 1000,
+        "min": 5.06,
+        "p5": 5.1,
+        "median": 5.14,
+        "p95": 5.18,
+        "max": 5.21
+      }
+    },
+    {
+      "scenario": "near",
+      "respond": true,
+      "runs": 1000,
+      "pctQuarantined": 0,
+      "pctWarned": 100,
+      "pctCorrected": 100,
+      "pctFreezeFlag": 0,
+      "pctChainOk": 100,
+      "firstAlertMin": {
+        "n": 1000,
+        "min": 11,
+        "p5": 11,
+        "median": 12,
+        "p95": 12,
+        "max": 13
+      },
+      "firstOutOfRangeMin": {
+        "n": 0
+      },
+      "excursionConfirmedMin": {
+        "n": 0
+      },
+      "warningLeadMin": {
+        "n": 0
+      },
+      "peakC": {
+        "n": 1000,
+        "min": 6.49,
+        "p5": 6.6,
+        "median": 6.77,
+        "p95": 6.94,
+        "max": 7.09
+      },
+      "lowC": {
+        "n": 1000,
+        "min": 4.83,
+        "p5": 4.92,
+        "median": 5,
+        "p95": 5.09,
+        "max": 5.1
+      },
+      "minutesOut": {
+        "n": 1000,
+        "min": 0,
+        "p5": 0,
+        "median": 0,
+        "p95": 0,
+        "max": 0
+      },
+      "mktC": {
+        "n": 1000,
+        "min": 5.53,
+        "p5": 5.57,
+        "median": 5.62,
+        "p95": 5.67,
+        "max": 5.75
+      }
+    },
+    {
+      "scenario": "near",
+      "respond": false,
+      "runs": 1000,
+      "pctQuarantined": 28,
+      "pctWarned": 100,
+      "pctCorrected": 0,
+      "pctFreezeFlag": 0,
+      "pctChainOk": 100,
+      "firstAlertMin": {
+        "n": 1000,
+        "min": 11,
+        "p5": 11,
+        "median": 12,
+        "p95": 12,
+        "max": 13
+      },
+      "firstOutOfRangeMin": {
+        "n": 700,
+        "min": 24,
+        "p5": 25,
+        "median": 27,
+        "p95": 27,
+        "max": 27
+      },
+      "excursionConfirmedMin": {
+        "n": 280,
+        "min": 24,
+        "p5": 25,
+        "median": 26,
+        "p95": 26,
+        "max": 26
+      },
+      "warningLeadMin": {
+        "n": 280,
+        "min": 13,
+        "p5": 13,
+        "median": 14,
+        "p95": 15,
+        "max": 15
+      },
+      "peakC": {
+        "n": 1000,
+        "min": 7.72,
+        "p5": 7.88,
+        "median": 8.06,
+        "p95": 8.27,
+        "max": 8.45
+      },
+      "lowC": {
+        "n": 1000,
+        "min": 4.76,
+        "p5": 4.83,
+        "median": 4.89,
+        "p95": 4.96,
+        "max": 5.02
+      },
+      "minutesOut": {
+        "n": 1000,
+        "min": 0,
+        "p5": 0,
+        "median": 1,
+        "p95": 3,
+        "max": 4
+      },
+      "mktC": {
+        "n": 1000,
+        "min": 5.51,
+        "p5": 5.54,
+        "median": 5.6,
+        "p95": 5.66,
+        "max": 5.72
+      }
+    },
+    {
+      "scenario": "breach",
+      "respond": true,
+      "runs": 1000,
+      "pctQuarantined": 100,
+      "pctWarned": 100,
+      "pctCorrected": 0,
+      "pctFreezeFlag": 0,
+      "pctChainOk": 100,
+      "firstAlertMin": {
+        "n": 1000,
+        "min": 33,
+        "p5": 34,
+        "median": 34,
+        "p95": 34,
+        "max": 34
+      },
+      "firstOutOfRangeMin": {
+        "n": 1000,
+        "min": 41,
+        "p5": 41,
+        "median": 42,
+        "p95": 43,
+        "max": 44
+      },
+      "excursionConfirmedMin": {
+        "n": 1000,
+        "min": 41,
+        "p5": 41,
+        "median": 42,
+        "p95": 43,
+        "max": 44
+      },
+      "warningLeadMin": {
+        "n": 1000,
+        "min": 7,
+        "p5": 7,
+        "median": 8,
+        "p95": 9,
+        "max": 10
+      },
+      "peakC": {
+        "n": 1000,
+        "min": 13.25,
+        "p5": 13.46,
+        "median": 13.7,
+        "p95": 13.95,
+        "max": 14.3
+      },
+      "lowC": {
+        "n": 1000,
+        "min": 4.84,
+        "p5": 4.91,
+        "median": 5,
+        "p95": 5.08,
+        "max": 5.1
+      },
+      "minutesOut": {
+        "n": 1000,
+        "min": 44,
+        "p5": 45,
+        "median": 46,
+        "p95": 47,
+        "max": 48
+      },
+      "mktC": {
+        "n": 1000,
+        "min": 8.77,
+        "p5": 8.9,
+        "median": 9.03,
+        "p95": 9.16,
+        "max": 9.28
+      }
+    },
+    {
+      "scenario": "freeze",
+      "respond": true,
+      "runs": 1000,
+      "pctQuarantined": 100,
+      "pctWarned": 100,
+      "pctCorrected": 0,
+      "pctFreezeFlag": 100,
+      "pctChainOk": 100,
+      "firstAlertMin": {
+        "n": 1000,
+        "min": 33,
+        "p5": 33,
+        "median": 34,
+        "p95": 34,
+        "max": 35
+      },
+      "firstOutOfRangeMin": {
+        "n": 1000,
+        "min": 47,
+        "p5": 48,
+        "median": 49,
+        "p95": 50,
+        "max": 51
+      },
+      "excursionConfirmedMin": {
+        "n": 1000,
+        "min": 47,
+        "p5": 48,
+        "median": 49,
+        "p95": 50,
+        "max": 51
+      },
+      "warningLeadMin": {
+        "n": 1000,
+        "min": 13,
+        "p5": 14,
+        "median": 15,
+        "p95": 16,
+        "max": 17
+      },
+      "peakC": {
+        "n": 1000,
+        "min": 5.43,
+        "p5": 5.52,
+        "median": 5.62,
+        "p95": 5.71,
+        "max": 5.8
+      },
+      "lowC": {
+        "n": 1000,
+        "min": -1.82,
+        "p5": -1.61,
+        "median": -1.38,
+        "p95": -1.12,
+        "max": -0.77
+      },
+      "minutesOut": {
+        "n": 1000,
+        "min": 35,
+        "p5": 36,
+        "median": 37,
+        "p95": 39,
+        "max": 40
+      },
+      "mktC": {
+        "n": 1000,
+        "min": 2.92,
+        "p5": 3.02,
+        "median": 3.1,
+        "p95": 3.18,
+        "max": 3.27
+      }
+    }
+  ],
+  "noiseSensitivity": [
+    {
+      "noiseSdC": 0.06,
+      "steadyC": 5,
+      "pctFalseWarning": 0,
+      "pctFalseQuarantine": 0
+    },
+    {
+      "noiseSdC": 0.1,
+      "steadyC": 5,
+      "pctFalseWarning": 5,
+      "pctFalseQuarantine": 0
+    },
+    {
+      "noiseSdC": 0.25,
+      "steadyC": 5,
+      "pctFalseWarning": 93.1,
+      "pctFalseQuarantine": 0
+    },
+    {
+      "noiseSdC": 0.5,
+      "steadyC": 5,
+      "pctFalseWarning": 100,
+      "pctFalseQuarantine": 0
+    }
+  ],
+  "shortExcursion": {
+    "trace": "5 °C, 2 min at 8.2–8.3 °C, back to 6 °C",
+    "quarantined": true,
+    "minutesOut": 2,
+    "peak": 8.3
+  },
+  "auditGaps": [
+    "sensor readings are not hashed: editing a reading verifies OK",
+    "event clock string is not hashed",
+    "decision object (shown in the report) is not hashed; only the decision event text is",
+    "truncating the newest events verifies OK (no external anchor of the head hash)",
+    "rewriting an event and recomputing every hash verifies OK (no signature or external anchor)",
+    "shipment status / quarantine flags are not hashed"
+  ],
+  "qr": [
+    {
+      "id": "TS-0138",
+      "status": "Created",
+      "urlChars": 586,
+      "qrModules": 81,
+      "qrVersion": 16,
+      "roundTrip": true,
+      "readingsInSnapshot": 0,
+      "readingsTotal": 0
+    },
+    {
+      "id": "TS-0137",
+      "status": "Delivered",
+      "urlChars": 986,
+      "qrModules": 105,
+      "qrVersion": 22,
+      "roundTrip": true,
+      "readingsInSnapshot": 24,
+      "readingsTotal": 93
+    },
+    {
+      "id": "TS-0136",
+      "status": "Quarantined",
+      "urlChars": 1165,
+      "qrModules": 113,
+      "qrVersion": 24,
+      "roundTrip": true,
+      "readingsInSnapshot": 24,
+      "readingsTotal": 93
+    },
+    {
+      "id": "TS-0135",
+      "status": "Disposed",
+      "urlChars": 1190,
+      "qrModules": 117,
+      "qrVersion": 25,
+      "roundTrip": true,
+      "readingsInSnapshot": 24,
+      "readingsTotal": 93
+    }
+  ],
+  "qrForgery": "A hand-edited snapshot (status changed to Released, hash prefix unchanged) decodes and would render as released: the QR payload is not signed.",
+  "timing": {
+    "1x": "59.8 s for 92 simulated minutes",
+    "2x": "29.44 s for 92 simulated minutes",
+    "4x": "14.72 s for 92 simulated minutes"
+  },
+  "summary": {
+    "asserted": 28,
+    "failed": 0,
+    "informational": 1
+  }
+}
