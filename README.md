@@ -70,6 +70,7 @@ The background research, model and test results behind the demo, with every clai
 |---|---|
 | [Research notes](docs/research/research-notes.md) | Cold-chain science, product labels, USP/WHO/GDP rules, data integrity, UAE regulation, existing products |
 | [Claims audit](docs/research/claims-audit.md) | Every README and UI claim checked against sources and test results |
+| [Pitch fact-check](docs/research/pitch-fact-check.md) | Problem statistics, UAE context, SDG 3, product claims and positioning, with what to say and what not to say |
 | [Model](docs/MODEL.md) | Every parameter and rule in `app.js`, with its source or marked [assumed] |
 | [Validation](docs/VALIDATION.md) | SHA-256, MKT, 4 scenarios × 1000 seeded runs, noise sensitivity, tamper and QR tests, early warning vs conventional alarms with a threshold sweep |
 | [Architecture](docs/ARCHITECTURE.md) · [QA](docs/QA.md) · [References](docs/REFERENCES.md) | Code layout and production path, checks, sources |

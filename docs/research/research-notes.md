@@ -47,9 +47,10 @@ real medicines. The research tells us what a real system would have to do. The
 ### 1.2 How often it goes wrong
 
 - **VERIFIED.** Freezing in the vaccine cold chain is common. A 2017 review of 45 studies
-  (Hanson et al., *Vaccine*) found exposure to temperatures below the recommended range
-  during storage in 33% of studies in wealthier countries and 37.1% in lower-income
-  countries [R16]. An earlier systematic review reached a similar conclusion (Matthias et al.
+  (Hanson et al., *Vaccine*) reports that "the percentage of vaccine exposure to
+  temperatures below recommended ranges during storage was 33% in wealthier countries and
+  37.1% in lower income countries", and that below-range exposure during shipments occurred
+  in 38% and 19.3% of studies respectively [R16]. An earlier systematic review reached a similar conclusion (Matthias et al.
   2007) [R17].
 - **VERIFIED.** Patients' own storage is also unreliable. People with diabetes (n = 338)
   carried Bluetooth sensors with their insulin (Braune et al. 2019), and insulin was often

@@ -71,6 +71,7 @@ means only the abstract or summary was read. "Secondary" means the fact comes fr
 | R41 | *Khaleej Times*, 1 Aug 2025, citing NCM: 51.8 °C at Sweihan. https://www.khaleejtimes.com/uae/weather/uae-weather-temperatures-hit-518cin-al-ain-says-ncm | Extreme heat | Secondary |
 | R42 | *What's On* (Aug 2024) citing NCM DXB records https://whatson.ae/2024/08/hottest-time-year-uae/ ; Infoclimat Dubai Intl August climatology https://www.infoclimat.fr/climatologie/globale/mois-d-aout/dubai-international-airport/41194.html | August mean ≈ 35.5 °C, highest monthly mean max ≈ 44 °C | Secondary |
 | R43 | *Fish Tank by Devin & Hub71* event page. https://luma.com/drjvjdpz | Tracks incl. Healthtech | Read |
+| R49 | United Nations, *Sustainable Development Goal 3: Ensure healthy lives and promote well-being for all at all ages*, targets and indicators. https://sdgs.un.org/goals/goal3 | SDG 3.3, 3.8, 3.b, 3.d wording | Read (targets) |
 | R44 | Sensitech TempTale GEO APX. https://www.sensitech.com/en/products/monitors/temptale-geo-apx-global/ | Competitor | Vendor |
 | R45 | Tive Solo Pro. https://www.tive.com/products/real-time-trackers/solo-pro-tracker | Competitor | Vendor |
 | R46 | ELPRO temperature data loggers. https://www.elpro.com/en/temperature-data-logger | Competitor | Vendor |
